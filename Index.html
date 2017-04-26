@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   	<link rel="stylesheet" href="style.css" />
+   	
+   	<h1 id="title">To Do List</h1>
+   
+
+</head>
+<body>
+	<div class="row">
+ 		<div class="col-lg-5">
+    		<div class="input-group">
+      			<span class="input-group-addon">
+       				<input type="checkbox" aria-label="..." onclick="handlers.toggleAll()">
+     			 </span>
+      			<input type="text" class="form-control" id= "inputText" aria-label="..." onkeypress="handlers.addTask2(event)" placeholder="Plans for Today?">
+   			</div>
+           
+        	<div class="well" style="max-height: 400px;overflow: auto;">
+            	
+            	<ul id="check-list-box" class="list-group checked-list-box">
+                </ul>
+                
+            <br />                
+
+        	</div>
+
+            	<button class="btn btn-primary col-xs-12" id="get-checked-data" onclick="handlers.deleteTask()">Delete</button>
+            	<button class="btn btn-primary col-xs-12" id="get-checked-data" onclick="handlers.newTask()">Edit</button>
+            
+                   
+            	
+            <div>
+  				<ul>How to Use:
+  					<li>To Create, Enter Text then press "Enter"</li>
+	  				<li>To Edit, Click on list item, type text, press edit to change</li>
+  					<li>To Delete, Click on item/s, press delete.</li>
+  					<li>To Toggle All List Items, click on the check box</li>
+  				</ul>	
+
+  				<ul>Limitations:
+	  				<li>Editing while multiple items are active will edit all active lists.</li>
+  				</ul>
+  			</div>
+  		</div>
+	</div>
+  		
+  		
+
+</body>
+<script src="script.js"></script>
+</html>
